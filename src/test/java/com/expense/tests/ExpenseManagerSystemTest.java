@@ -58,7 +58,7 @@ public class ExpenseManagerSystemTest {
         	BasicCredentials cred = new BasicCredentials("UmangVerity", "Saltuniv@123");
 			
 			//You need to enter your JIRA machine IP address with port 8080 in below line
-        	JiraClient jira = new JiraClient("http://3.94.165.151:8080", cred);
+        	JiraClient jira = new JiraClient("https://umangverity1.atlassian.net/", cred);
 			
 			//You need to enter your JIRA project key in below line
         	Issue issueName = jira.createIssue("AUT", "Bug").field(Field.SUMMARY, result.getMethod().getMethodName() +"is failed due to: "+ result.getThrowable().toString()).field(Field.DESCRIPTION, "get the description").execute();
